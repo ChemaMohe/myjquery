@@ -1,0 +1,63 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript">
+			make = {};
+			var tags = ["a", "div", "h1", "span", "form" , "h1" , "h2", "h3", "h4"];
+			/*for(var i=0; i;tags.length; i++){
+				 (function(tag){
+					make[tag] = function(){
+						return document.createElement(tag);
+					};
+				})(tags[i]);
+			}*/
+			tags.forEach(function(tag)
+			{
+				make[tag] = function(){
+					return document.createElement(tag);
+				};
+			});
+			/*make.h1 = function(){
+				return document.createElement('h1');
+			};
+			make.a = function(){
+				return document.createElement('a');
+			}*/
+		</script>
+		<script type="text/javascript">
+			/*var h1 = make.h1();
+
+			h1.innerHTML = "Hello World";
+			document.body.appendChild(h1);
+
+			var a = make.a();
+
+			a.href = "http://canjs.com";
+			a.innerHTML = "CanJS";
+
+			document.body.appendChild(a);
+			*/
+			var Person = function(name){
+				this.name = name;
+			}
+			Person.protype.isPerson = true;
+
+			var person = new Person('Smith');
+			DOT(person,'name');
+			DOT(person,'isPerson');
+			/*var me = {
+				name: {
+					first: "justin"
+				}
+			};
+			name = me.name;
+			/*name = {
+				first:"alexis"
+			};
+			name.first = "alexis";
+			console.log(me.name.first);*/
+			var a = {};
+			console.log(a.toString());
+		</script>
+	</body>
+</html>
