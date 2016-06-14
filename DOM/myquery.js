@@ -7,7 +7,7 @@
 			return new $(selector);
 		}
 		var els;
-		//If selector is a string
+		//If selector is a stringaa
 		if(typeof selector === "string")
 		{
 			els = document.querySelectorAll(selector);
